@@ -1,0 +1,27 @@
+.base {
+	display: block;
+	fill: none;
+	transform-box: fill-box;
+	font-family: Tahoma, Helvetica, Arial, Verdana, sans-serif;
+}
+
+.inner_circle_time {
+	@apply fill-slate-100;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.completion_ring_stroke {
+	@apply stroke-slate-400/50;
+	stroke-linecap: round;
+	stroke-dasharray: 0 6;
+	transform: rotate(10deg);
+	transform-origin: center center;
+}
+
+.completion_ring_fill {
+	transform: rotate(-89.9deg);
+	transform-origin: center center 0px;
+	transition: stroke-dasharray 1s linear 0s;
+	@apply stroke-slate-200;
+}

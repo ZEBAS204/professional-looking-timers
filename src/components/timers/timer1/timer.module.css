@@ -1,0 +1,35 @@
+.base {
+	display: block;
+	fill: none;
+	transform-box: fill-box;
+}
+
+.inner_circle {
+	@apply fill-gray-900/70 stroke-gray-700;
+}
+
+.inner_circle_time {
+	@apply fill-blue-600;
+	font-family: consolas, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.inner_circle_time_total {
+	@apply fill-blue-700;
+	font-family: consolas, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+	font-size: 0.5em;
+	font-weight: thin;
+}
+
+.completion_ring_stroke {
+	@apply stroke-gray-700;
+}
+
+.completion_ring_fill {
+	filter: url('#base-timer__dropshadow');
+	transform: rotate(-89.9deg);
+	transform-origin: center center 0px;
+	transition: stroke-dasharray 1s linear 0s;
+	@apply stroke-blue-600;
+}

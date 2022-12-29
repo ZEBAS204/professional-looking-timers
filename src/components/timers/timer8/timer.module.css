@@ -1,0 +1,34 @@
+.base {
+	display: block;
+	fill: none;
+	transform-box: fill-box;
+	font-family: Tahoma, Helvetica, Arial, Verdana, sans-serif;
+}
+
+.inner_circle_time {
+	@apply fill-blue-600;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.inner_circle_time_seconds {
+	@apply fill-blue-700;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.completion_ring_stroke {
+	@apply stroke-gray-700;
+}
+
+.completion_ring_fill,
+.completion_ring_fill_seconds {
+	stroke-dashoffset: -3.15;
+	transition: stroke-dasharray 1s linear 0s;
+	@apply stroke-blue-600;
+}
+
+.completion_ring_fill_seconds {
+	@apply stroke-blue-700;
+}
