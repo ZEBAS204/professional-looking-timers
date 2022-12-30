@@ -4,7 +4,6 @@ import styles from './app.module.css'
 
 import {
 	Timer1,
-	Timer1Square,
 	Timer1Inverted,
 	Timer2,
 	Timer3,
@@ -12,20 +11,19 @@ import {
 	Timer5,
 	Timer6,
 	Timer7,
+	Timer8,
 } from 'components/timers'
 
 const showcase = [
-	Timer7,
-
 	Timer1,
 	Timer1Inverted,
-	Timer1Square,
-
 	Timer2,
 	Timer3,
 	Timer4,
 	Timer5,
 	Timer6,
+	Timer7,
+	Timer8,
 ]
 
 export default function App() {
