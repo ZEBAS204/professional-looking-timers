@@ -41,7 +41,7 @@
 	@apply stroke-slate-400/50;
 	stroke-linecap: round;
 	stroke-dasharray: 0 3;
-	transform: rotate(10deg);
+	transform: rotate(-0.5deg);
 	transform-origin: center center;
 }
 
