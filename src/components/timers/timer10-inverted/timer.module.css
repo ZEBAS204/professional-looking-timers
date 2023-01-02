@@ -1,0 +1,31 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+}
+
+.inner_circle {
+	fill: #334457;
+}
+
+.inner_circle_time {
+	@apply fill-slate-100;
+	font-size: 1em;
+	font-weight: bold;
+	font-family: 'Comic Sans MS', sans-serif;
+}
+
+.completion_ring_stroke,
+.completion_ring_fill {
+	stroke-width: 4;
+	stroke-linecap: square;
+	transform: rotate(-90deg);
+	transform-origin: center center 0px;
+}
+
+.completion_ring_stroke {
+	stroke: #85a9f3;
+}
+
+.completion_ring_fill {
+	stroke: #f7cb7b;
+}

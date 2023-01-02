@@ -14,6 +14,7 @@ import {
 	Timer8,
 	Timer9,
 	Timer10,
+	Timer10Inverted,
 } from 'components/timers'
 
 const showcase = [
@@ -28,6 +29,7 @@ const showcase = [
 	Timer8,
 	Timer9,
 	Timer10,
+	Timer10Inverted,
 ]
 
 export default function App() {
