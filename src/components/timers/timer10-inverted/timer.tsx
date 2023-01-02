@@ -7,7 +7,7 @@ import { TimerProps } from 'components/timers/time_manager'
 import styles from './timer.module.css'
 
 const dynamicStyle = ({ totalTime, remainingTime }) => {
-	const progressPercent = Math.round((remainingTime / totalTime) * 100) + 1
+	const progressPercent = Math.round((remainingTime / totalTime) * 100)
 
 	return {
 		height: '100%',
@@ -35,7 +35,7 @@ export const Timer = ({
 	const { changeTime } = useTimerContext()
 
 	useEffect(() => {
-		changeTime(60)
+		changeTime(10)
 	}, [])
 
 	return (
