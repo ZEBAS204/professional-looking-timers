@@ -1,0 +1,24 @@
+.header {
+	@apply pt-16 z-10 relative max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col gap-9;
+}
+
+.headerTopTitle {
+	@apply text-2xl sm:text-5xl leading-tight tracking-tight font-bold text-purple-500;
+}
+
+.headerTopTitleHighlight {
+	@apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500;
+	text-shadow: 4px 1px 0px #fff;
+}
+
+.headerBottomDescription {
+	@apply pl-1 text-lg text-gray-100 font-sans;
+}
+
+.copy {
+	@apply flex space-x-4;
+}
+
+.gradient {
+	@apply absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem] left-[calc(50%-11rem)] h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem];
+}

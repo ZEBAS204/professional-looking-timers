@@ -2,27 +2,6 @@
 	@apply px-4 min-h-screen sm:px-0 space-y-16 w-full bg-slate-800;
 }
 
-.header {
-	@apply pt-16 z-10 relative max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col gap-9;
-}
-
-.headerTopTitle {
-	@apply text-2xl sm:text-5xl leading-tight tracking-tight font-bold text-purple-500;
-}
-
-.headerTopTitleHighlight {
-	@apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500;
-	text-shadow: 4px 1px 0px #fff;
-}
-
-.headerBottomDescription {
-	@apply pl-1 text-lg text-gray-100 font-sans;
-}
-
-.copy {
-	@apply flex space-x-4;
-}
-
 .showcase {
 	@apply max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col gap-10;
 }
