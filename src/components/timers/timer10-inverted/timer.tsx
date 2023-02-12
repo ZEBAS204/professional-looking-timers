@@ -1,31 +1,9 @@
 import { useEffect } from 'react'
-import styled from '@emotion/styled'
 
 import { useTimerContext } from 'components/timers/time_context'
 import { TimerProps } from 'components/timers/time_manager'
 
 import styles from './timer.module.css'
-
-const dynamicStyle = ({ totalTime, remainingTime }) => {
-	const progressPercent = Math.round((remainingTime / totalTime) * 100)
-
-	return {
-		height: '100%',
-		width: '100%',
-		'border-radius': ' 50%',
-		transform: 'rotate(-2.5deg)',
-		'transform-origin': 'center center 0',
-
-		//! The effect WILL LOOK JAGGED ON FIREFOX
-		//! https://bugzilla.mozilla.org/show_bug.cgi?id=1625917
-		//! https://bugzilla.mozilla.org/show_bug.cgi?id=1715370
-		'background-image': `conic-gradient(transparent ${progressPercent}%, #334457 0)`,
-	}
-}
-
-const PizzaGradientComponent = styled.div`
-	${dynamicStyle}
-`
 
 export const Timer = ({
 	totalTime,
@@ -60,14 +38,22 @@ export const Timer = ({
 
 			<circle className={styles.inner_circle} r="50" cx="50" cy="50" />
 
-			<circle fill="url(#pizzaPattern)" r="42" cx="50" cy="50" />
-			<foreignObject x="0" y="0" width="100" height="100">
-				<PizzaGradientComponent
-					totalTime={totalTime}
-					remainingTime={remainingTime}
-				/>
-			</foreignObject>
-
+			<circle
+				className={styles.pizza_pattern_smooth}
+				r="22"
+				cx="50"
+				cy="50"
+				fill="transparent"
+				stroke="url(#pizzaPattern)"
+				strokeWidth="40"
+				pathLength={
+					// Plus 0.05 is to prevent a strange offset in the stroke
+					// in chromium based browsers
+					totalTime - 0.05
+				}
+				strokeDasharray={`${remainingTime} ${totalTime}`}
+				transform="rotate(-90) translate(-100)"
+			/>
 			<circle
 				className={styles.completion_ring_stroke}
 				r="46"

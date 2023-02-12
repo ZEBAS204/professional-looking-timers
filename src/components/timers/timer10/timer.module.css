@@ -17,9 +17,8 @@
 .completion_ring_stroke,
 .completion_ring_fill {
 	stroke-width: 4;
-	stroke-linecap: square;
 	transform: rotate(-90deg);
-	transform-origin: center center 0px;
+	transform-origin: center;
 }
 
 .completion_ring_stroke {
@@ -28,4 +27,8 @@
 
 .completion_ring_fill {
 	stroke: #f7cb7b;
+}
+
+.pizza_pattern_smooth {
+	/*transition: stroke-dasharray 1s linear 0s;*/
 }
