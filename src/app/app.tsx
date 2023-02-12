@@ -1,5 +1,4 @@
-import { StarIcon, LinkIcon } from '@heroicons/react/24/solid'
-import Button from 'components/atoms/button'
+import Hero from './hero'
 import styles from './app.module.css'
 
 import {
