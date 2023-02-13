@@ -1,4 +1,4 @@
-import { StarIcon, LinkIcon } from '@heroicons/react/24/solid'
+import { StarIcon } from '@heroicons/react/24/solid'
 import {
 	EyeIcon,
 	ClipboardDocumentIcon,
@@ -7,6 +7,28 @@ import {
 import Button from 'components/atoms/button'
 
 import styles from './hero.module.css'
+
+const Steps = ({ title, icon: Icon, stepnum, children }) => (
+	<li className="flex rounded-lg p-8 flex-col bg-slate-700 shadow-ring">
+		<div className="flex items-center mb-3">
+			<div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white">
+				<Icon className="w-6 h-6" aria-hidden="true" />
+			</div>
+			<h2 className="flex items-center text-lg font-semibold leading-6 gap-2">
+				<span className="text-indigo-500">Step {stepnum}</span>
+				<span className="h-4 w-px bg-slate-500" />
+				<span className="text-white">{title}</span>
+			</h2>
+		</div>
+		<p className="leading-relaxed text-base text-justify text-slate-300">
+			{children}
+		</p>
+	</li>
+)
+
+const Highlight = ({ children }) => (
+	<span className={styles.highlight}>{children}</span>
+)
 
 export default function () {
 	return (
@@ -36,14 +58,13 @@ export default function () {
 				/>
 			</svg>
 			<h1 className={styles.headerTopTitle}>
-				<span className={styles.headerTopTitleHighlight}>
-					Professional-looking Timers
-				</span>{' '}
-				with pure CSS styling
+				Professional-looking Timers
+				{'\n'}
+				<Highlight>with pure CSS styling</Highlight>
 			</h1>
 			<p className={styles.headerBottomDescription}>
 				This is a collection of timers that have been designed and developed
-				using pure CSS.
+				using <Highlight>pure CSS</Highlight> and <Highlight>SVG</Highlight>.
 				<br />
 				These timers are not only visually appealing, but they are also fully
 				functional and can be easily integrated into any application. My
@@ -68,58 +89,31 @@ export default function () {
 					</Button>
 				</a>
 			</div>
-			<div className="text-gray-400 bg-gray-900">
-				<div className="container px-5 py-24 mx-auto">
-					<div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-						<div className="p-4 md:w-1/3 flex">
-							<div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-200 text-indigo-400 flex-shrink-0 m-6">
-								<EyeIcon />
-							</div>
-							<div className="flex-grow pl-6">
-								<h2 className="text-white text-lg title-font font-medium mb-2">
-									Find the perfect component
-								</h2>
-								<p className="leading-relaxed text-base">
-									Every component is embedded live directly on the page, and you
-									can even see what they look like at different breakpoints by
-									dragging the slider on the right.
-								</p>
-							</div>
-						</div>
-						<div className="p-4 md:w-1/3 flex">
-							<div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4 flex-shrink-0">
-								<ClipboardDocumentIcon />
-							</div>
-							<div className="flex-grow pl-6">
-								<h2 className="text-white text-lg title-font font-medium mb-2">
-									Copy the snippet
-								</h2>
-								<p className="leading-relaxed text-base">
-									Click the "Source" button to see the code for a component. All
-									components receive the time as props, so you can easily adapt
-									to an existing workflow or, if you want, copy the code of the
-									context.
-								</p>
-							</div>
-						</div>
-						<div className="p-4 md:w-1/3 flex">
-							<div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4 flex-shrink-0">
-								<StarIconOutline />
-							</div>
-							<div className="flex-grow pl-6">
-								<h2 className="text-white text-lg title-font font-medium mb-2">
-									Customize to your liking
-								</h2>
-								<p className="leading-relaxed text-base">
-									Every component is built entirely out of SVG and CSS, so you
-									can easily modify anything you want to better fit your use
-									case.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<ol className="grid grid-cols-1 gap-8 lg:grid-cols-3 mt-8">
+				<Steps stepnum={1} title="Find the perfect component" icon={EyeIcon}>
+					Every component is embedded live directly on the page, and you can
+					even see what they look like at different breakpoints by dragging the
+					slider on the right.
+				</Steps>
+				<Steps
+					stepnum={2}
+					title="Copy the snippet"
+					icon={ClipboardDocumentIcon}
+				>
+					Click the <Highlight>Source</Highlight> button to see the code for a
+					component. All components receive the time as props, so you can easily
+					adapt to an existing workflow or, if you want, copy the code of the
+					context.
+				</Steps>
+				<Steps
+					stepnum={3}
+					title="Customize to your liking"
+					icon={StarIconOutline}
+				>
+					Every component is built entirely out of SVG and CSS, so you can
+					easily modify anything you want to better fit your use case.
+				</Steps>
+			</ol>
 		</header>
 	)
 }

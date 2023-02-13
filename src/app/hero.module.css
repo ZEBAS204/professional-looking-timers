@@ -3,12 +3,12 @@
 }
 
 .headerTopTitle {
-	@apply text-2xl sm:text-5xl leading-tight tracking-tight font-bold text-purple-500;
+	@apply text-white text-4xl sm:text-5xl lg:text-6xl;
+	white-space: pre;
 }
 
-.headerTopTitleHighlight {
-	@apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500;
-	text-shadow: 4px 1px 0px #fff;
+.highlight {
+	@apply text-sky-400 font-semibold;
 }
 
 .headerBottomDescription {
