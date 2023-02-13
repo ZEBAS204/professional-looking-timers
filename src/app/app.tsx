@@ -29,44 +29,28 @@ const showcase = [
 	Timer9,
 	Timer10,
 	Timer10Inverted,
-]
+].map(({ title, ...rest }, key) => ({
+	...rest,
+	title,
+	id: title.replace(' ', '-') + key,
+}))
 
 export default function App() {
 	return (
 		<main className={styles.main}>
 			<Hero />
+
+			<div
+				className="h-2 w-full bg-slate-700 bg-opacity-50"
+				aria-hidden="true"
+			/>
+
 			<section className={styles.showcase}>
-				{showcase.map(
-					({ component, title, description, attribution, source }, key) => {
-						const id = title.replace(' ', '-')
-						/*<div className={styles.showcaseInfo}>
-									<div
-										className={styles.showcaseInfoLinkIcon}
-										onClick={() => {
-											// TODO: set URL to point to the #{id}
-										}}
-									>
-										<LinkIcon />
-									</div>
-						*/
-						return (
-							<div className={styles.showcaseContent} id={id} key={key}>
-								<div className={styles.showcaseLine}></div>
-								<div className={styles.showcaseInfo}>
-									<h4>
-										{title} -{' '}
-										<a className={styles.showcaseSource} href={source}>
-											SOURCE
-										</a>
-									</h4>
-									{description}
-									<div>Contributors: {attribution}</div>
-								</div>
-								<div className={styles.showcaseContentClock}>{component()}</div>
-							</div>
-						)
-					}
-				)}
+				{showcase.map(({ component: Component, ...props }) => (
+					<ComponentShowcase key={props.id} {...props}>
+						<Component />
+					</ComponentShowcase>
+				))}
 			</section>
 		</main>
 	)
