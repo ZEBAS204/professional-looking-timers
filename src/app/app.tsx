@@ -1,3 +1,4 @@
+import { Showcase as ComponentShowcase } from 'components/atoms/showcase'
 import Hero from './hero'
 import styles from './app.module.css'
 
