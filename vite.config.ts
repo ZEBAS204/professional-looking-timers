@@ -15,6 +15,11 @@ export default defineConfig((configEnv) => {
 				'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap',
 			]),
 		],
+		define: {
+			__PROJECT_SOURCE__: JSON.stringify(
+				'https://github.com/ZEBAS204/professional-looking-timers'
+			),
+		},
 		resolve: {
 			alias: {
 				app: resolve(__dirname, 'src/app'),
