@@ -1,0 +1,17 @@
+.base {
+  display: block;
+  fill: none;
+  transform-box: fill-box;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+.text {
+  font-size: 50px;
+  font-weight: 800;
+  fill: #fff;
+  stroke: rgba(26, 26, 26, 0.3);
+  stroke-linejoin: round;
+  text-anchor: start;
+  stroke-width: 2px;
+  paint-order: stroke fill;
+}
