@@ -39,6 +39,7 @@ export default function ({
 						</h2>
 						<Tag icon={RocketLaunchIcon}>Animated</Tag>
 						<a
+							aria-hidden="true"
 							href={`#${id}`}
 							title="Copy link"
 							className="opacity-0 group-hover:opacity-100 transition duration-200 text-slate-400 hover:text-indigo-500"
@@ -65,10 +66,6 @@ export default function ({
 					</div>
 				</div>
 			</div>
-			<div aria-hidden="true" className="flex h-2 w-full bg-slate-600">
-				<div aria-hidden="true" className="flex h-full w-[90%] bg-indigo-400" />
-			</div>
-
 			<Resizable initialWidth={width}>
 				<div className="flex justify-center p-6 rounded-b-xl border-2 border-t-0 border-dashed border-slate-600 bg-dots-pattern bg-slate-900 bg-opacity-30">
 					{children}
