@@ -3,64 +3,50 @@
 }
 
 .showcase {
-	@apply max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col gap-10;
+	@apply max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col gap-10 pb-20;
 }
 
-.showcaseLine {
-	@apply flex flex-col relative pointer-events-none w-2 min-h-full;
-	border-radius: 6px;
-	background: linear-gradient(
-		transparent,
-		#a371f7 10%,
-		#196c2e 70%,
-		#2ea043 80%,
-		transparent
-	);
+.footer {
+	@apply bg-slate-900 relative overflow-hidden;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(148 163 184 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
 }
 
-.showcaseContent {
-	@apply flex flex-row text-gray-50;
+.footerHeader {
+	@apply max-w-screen-lg xl:max-w-screen-xl mx-auto text-center py-20 overflow-hidden;
 }
 
-.showcaseInfo {
-	@apply flex flex-col ml-4;
+.contributeHeader {
+	@apply relative sm:text-5xl text-3xl mb-6 text-white z-10;
 }
 
-.showcaseInfo h4 {
-	@apply font-bold inline;
+.contributeButton {
+	@apply relative inline-flex items-center justify-center p-4 px-6 py-2 overflow-hidden transition duration-300 ease-out border-2 bg-slate-200 border-purple-500 rounded-lg shadow-md font-semibold;
+	z-index: 1;
 }
 
-.showcaseContentClock {
-	@apply relative shadow-lg w-full flex justify-center rounded-3xl ring-1 ring-slate-400/60;
-	width: 50%;
-	/*@apply bg-gradient-to-br from-sky-500 to-indigo-500;*/
+.contributeButtonIcon {
+	@apply absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-x-full bg-purple-500 text-slate-900;
 }
 
-.showcaseSource {
-	@apply text-lime-300 hover:text-emerald-400 font-medium;
+.contributeButtonIcon > svg {
+	@apply w-8 h-8 stroke-current;
 }
 
-.showcaseSource:before,
-.showcaseSource:after {
-	display: inline-block;
-	opacity: 0;
-	transition: transform 0.3s, opacity 0.2s;
+.contributeButtonText {
+	@apply absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform;
 }
 
-.showcaseSource:hover:before,
-.showcaseSource:hover:after {
-	opacity: 1;
-	transform: translateX(0);
+.contributeButton:hover .contributeButtonIcon {
+	@apply translate-x-0;
+}
+.contributeButton:hover .contributeButtonText {
+	@apply translate-x-full;
 }
 
-.showcaseSource:before {
-	content: '[';
-	margin-right: 10px;
-	transform: translateX(20px);
+.Invisible {
+	@apply relative invisible;
 }
 
-.showcaseSource:after {
-	content: ']';
-	margin-left: 10px;
-	transform: translateX(-20px);
+.blobBG {
+	@apply absolute top-[-42px] z-0 mix-blend-color-dodge w-full h-[600px] opacity-70;
 }
