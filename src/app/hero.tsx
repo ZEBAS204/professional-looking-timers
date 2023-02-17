@@ -80,7 +80,7 @@ export default function () {
 				projects. Happy codding!
 			</p>
 			<div className={styles.copy}>
-				<a href="#">
+				<a href={__PROJECT_SOURCE__}>
 					<Button>Visit on Github</Button>
 				</a>
 				<a href="#" title="Star project">
