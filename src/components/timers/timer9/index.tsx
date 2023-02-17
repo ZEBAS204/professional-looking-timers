@@ -4,7 +4,7 @@ import { Controls } from './controls'
 
 const Component = (): JSX.Element => {
 	return (
-		<div class="flex flex-col">
+		<div className="flex flex-col">
 			<TimerContext>
 				<Timer />
 				<Controls />
