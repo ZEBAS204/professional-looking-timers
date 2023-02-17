@@ -8,7 +8,7 @@
 }
 
 .inner_circle_time {
-	@apply fill-slate-100;
+	fill: #f1f5f9;
 	font-size: 1em;
 	font-weight: bold;
 	font-family: 'Comic Sans MS', sans-serif;

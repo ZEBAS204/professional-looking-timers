@@ -28,17 +28,17 @@
 }
 
 .inner_circle {
-	@apply fill-slate-100;
+	fill: #f1f5f9;
 }
 
 .inner_circle_time {
-	@apply fill-slate-800;
+	fill: #1e293b;
 	font-size: 1em;
 	font-weight: bold;
 }
 
 .inner_dashed_stroke {
-	@apply stroke-slate-400/50;
+	stroke: rgba(148, 163, 184, 0.5);
 	stroke-linecap: round;
 	stroke-dasharray: 0 3;
 	transform: rotate(-0.5deg);
@@ -46,7 +46,7 @@
 }
 
 .completion_ring_stroke {
-	@apply stroke-slate-400/50;
+	stroke: rgba(15, 23, 42, 0.3);
 }
 
 .completion_ring_fill,
@@ -58,6 +58,6 @@
 }
 
 .completion_ring_fill_stroke {
-	@apply stroke-slate-100;
+	stroke: #f1f5f9;
 	stroke-width: 5;
 }

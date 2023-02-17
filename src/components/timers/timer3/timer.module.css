@@ -10,7 +10,7 @@
 }
 
 .timeDisplay {
-	@apply bg-slate-600;
+	background: rgb(71, 85, 105);
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px,
@@ -30,7 +30,7 @@
 }
 
 .timeType {
-	@apply text-gray-100;
+	color: rgb(243, 244, 246);
 	font-weight: 300;
 	font-size: 1.25rem;
 	line-height: 1.2;

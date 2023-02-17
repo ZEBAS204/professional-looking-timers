@@ -6,13 +6,13 @@
 }
 
 .inner_circle_time {
-	@apply fill-slate-100;
+	fill: #f1f5f9;
 	font-size: 1em;
 	font-weight: bold;
 }
 
 .completion_ring_stroke {
-	@apply stroke-slate-400/50;
+	stroke: rgba(148, 163, 184, 0.5);
 	stroke-linecap: round;
 	stroke-dasharray: 0 6;
 	transform: rotate(10deg);
@@ -23,5 +23,5 @@
 	transform: rotate(-89.9deg);
 	transform-origin: center center 0px;
 	transition: stroke-dasharray 1s linear 0s;
-	@apply stroke-slate-200;
+	stroke: #e2e8f0;
 }

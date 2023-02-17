@@ -5,25 +5,26 @@
 }
 
 .inner_circle {
-	@apply fill-gray-900/70 stroke-gray-700;
+	fill: rgba(17, 24, 39, 0.7);
+	stroke: #374151;
 }
 
 .inner_circle_time {
-	@apply fill-violet-600;
+	fill: #7c3aed;
 	font-family: consolas, Helvetica, Arial, Verdana, Tahoma, sans-serif;
 	font-size: 1em;
 	font-weight: bold;
 }
 
 .inner_circle_time_total {
-	@apply fill-violet-700;
+	fill: #6d28d9;
 	font-family: consolas, Helvetica, Arial, Verdana, Tahoma, sans-serif;
 	font-size: 0.5em;
 	font-weight: thin;
 }
 
 .completion_ring_stroke {
-	@apply stroke-gray-700;
+	stroke: #374151;
 }
 
 .completion_ring_fill {
@@ -31,5 +32,5 @@
 	transform: rotate(-89.9deg);
 	transform-origin: center center 0px;
 	transition: stroke-dasharray 1s linear 0s;
-	@apply stroke-violet-600;
+	stroke: #7c3aed;
 }

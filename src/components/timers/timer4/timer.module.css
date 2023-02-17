@@ -29,7 +29,7 @@
 }
 
 .timeType {
-	@apply text-gray-100;
+	color: rgb(243, 244, 246);
 	font-weight: 300;
 	font-size: 1.25rem;
 	line-height: 1.2;
