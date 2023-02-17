@@ -47,7 +47,7 @@ export const Timer = ({
 				stroke="url(#pizzaPattern)"
 				strokeWidth="40"
 				pathLength={
-					// Plus 0.05 is to prevent a strange offset in the stroke
+					// Minus 0.05 is to prevent a strange offset in the stroke
 					// in chromium based browsers
 					totalTime - 0.05
 				}
@@ -66,11 +66,7 @@ export const Timer = ({
 				cx="50"
 				cy="50"
 				pathLength={totalTime}
-				strokeDasharray={
-					// Plus 1 to prevent a strange offset in the stroke
-					// in chromium based browsers
-					`${remainingTime} ${totalTime}`
-				}
+				strokeDasharray={`${remainingTime} ${totalTime}`}
 			/>
 			<text
 				className={styles.inner_circle_time}
