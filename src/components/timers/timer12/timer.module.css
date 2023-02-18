@@ -1,0 +1,28 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+	transform-origin: center;
+	animation: pulse 2s infinite;
+}
+
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 200px;
+	font-weight: 800;
+	text-anchor: middle;
+	fill: #fff;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+	}
+
+	70% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.95);
+	}
+}

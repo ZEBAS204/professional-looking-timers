@@ -17,6 +17,7 @@ import {
 	Timer10,
 	Timer10Inverted,
 	Timer11,
+	Timer12,
 } from 'components/timers'
 
 const showcase = [
@@ -33,6 +34,7 @@ const showcase = [
 	Timer10,
 	Timer10Inverted,
 	Timer11,
+	Timer12,
 ].map(({ title, ...rest }, key) => ({
 	...rest,
 	title,
