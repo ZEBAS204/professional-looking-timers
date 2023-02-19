@@ -2,26 +2,7 @@
   "name": "professional-looking-timers",
   "version": "1.0.0",
   "description": "A collection of professional-looking timers made on pure CSS",
-  "homepage": "https://github.com/jvidalv/vital#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jvidalv/vital.git"
-  },
   "license": "MIT",
-  "keywords": [
-    "react",
-    "vite",
-    "typescript",
-    "jest",
-    "tailwind",
-    "template",
-    "starter",
-    "css-modules",
-    "eslint",
-    "prettier",
-    "husky",
-    "commit-lint"
-  ],
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -49,6 +30,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@rollup/plugin-replace": "^5.0.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@types/jest": "^28.1.3",
@@ -69,7 +51,7 @@
     "lint-staged": "^11.2.6",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
-    "tailwindcss": "^3.1.4",
+    "tailwindcss": "^3.2.4",
     "ts-jest": "^28.0.5",
     "typescript": "^4.7.4",
     "vite": "^2.9.13",
