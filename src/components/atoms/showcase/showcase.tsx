@@ -1,6 +1,14 @@
 import { useState, useRef, useEffect } from 'react'
-import { CodeBracketIcon, LinkIcon } from '@heroicons/react/24/outline'
-import { RocketLaunchIcon } from '@heroicons/react/24/solid'
+import {
+	CodeBracketIcon,
+	LinkIcon,
+	CubeIcon as CubeIconStroke,
+} from '@heroicons/react/24/outline'
+import {
+	RocketLaunchIcon,
+	UsersIcon,
+	CubeIcon as CubeIconSolid,
+} from '@heroicons/react/20/solid'
 import Resizable from 'components/atoms/resizable'
 
 import styles from './showcase.module.css'
@@ -25,7 +33,6 @@ export default function ({
 
 	useEffect(() => {
 		const parentWidth = ref.current?.offsetWidth
-		console.log(parentWidth)
 		setWidth(parentWidth)
 	}, [])
 
@@ -38,6 +45,8 @@ export default function ({
 							{title}
 						</h2>
 						<Tag icon={RocketLaunchIcon}>Animated</Tag>
+						<Tag icon={CubeIconSolid}>Filled</Tag>
+						<Tag icon={CubeIconStroke}>Stroke</Tag>
 						<a
 							aria-hidden="true"
 							href={`#${id}`}
