@@ -77,7 +77,7 @@ export default function ({
 			</div>
 			<Resizable initialWidth={width}>
 				<div className="flex justify-center p-6 rounded-b-xl border-2 border-t-0 border-dashed border-slate-600 bg-dots-pattern bg-slate-900 bg-opacity-30">
-					{children}
+					<div className={styles.resizableChildren}>{children}</div>
 				</div>
 			</Resizable>
 		</section>

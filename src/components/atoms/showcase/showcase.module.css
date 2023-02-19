@@ -1,0 +1,3 @@
+.resizableChildren {
+	width: clamp(1%, 50%, 100%);
+}

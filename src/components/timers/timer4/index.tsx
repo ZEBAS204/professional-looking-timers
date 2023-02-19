@@ -4,12 +4,10 @@ import { Controls } from './controls'
 
 const Component = (): JSX.Element => {
 	return (
-		<div className="flex flex-col items-center">
-			<TimerContext>
-				<Timer />
-				<Controls />
-			</TimerContext>
-		</div>
+		<TimerContext>
+			<Timer />
+			<Controls />
+		</TimerContext>
 	)
 }
 
