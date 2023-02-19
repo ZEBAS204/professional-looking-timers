@@ -17,7 +17,7 @@ const TIMER = {
 	title: "Pizza o'clock - Inverted",
 	description: 'A description',
 	attribution: [],
-	source: '#',
+	source: '__TIMER_URL__',
 	component: Component,
 }
 

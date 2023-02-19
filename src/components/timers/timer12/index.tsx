@@ -18,7 +18,7 @@ const TIMER = {
 	description:
 		'A glowing heart to warm you on those cold nights (not a reference to O Canada)',
 	attribution: [],
-	source: '#',
+	source: '__TIMER_URL__',
 	component: Component,
 }
 

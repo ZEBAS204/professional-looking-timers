@@ -15,7 +15,7 @@ const TIMER = {
 	title: 'Timer 1',
 	description: 'A description',
 	attribution: [],
-	source: '#',
+	source: '__TIMER_URL__',
 	component: Component,
 }
 

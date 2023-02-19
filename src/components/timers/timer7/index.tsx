@@ -16,7 +16,7 @@ const TIMER = {
 	description:
 		'Make use of glassmorphism effect and a combination of gradients to simulate a fancy glass effect',
 	attribution: [],
-	source: '#',
+	source: '__TIMER_URL__',
 	component: Component,
 }
 
