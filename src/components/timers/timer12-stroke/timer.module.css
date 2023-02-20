@@ -1,0 +1,16 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+.stroke {
+	transition: stroke-dasharray 1s linear 0s;
+}
+
+.text {
+	font-size: 200px;
+	font-weight: 800;
+	fill: #fff;
+	text-anchor: middle;
+}
