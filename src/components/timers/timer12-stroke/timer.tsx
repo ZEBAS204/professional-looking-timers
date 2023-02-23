@@ -19,7 +19,7 @@ export const Timer = ({ totalTime, remainingTime, seconds }: TimerProps) => {
 			className={styles.base}
 		>
 			<defs>
-				<filter id="timer12Glow">
+				<filter id="timer12StrokeGlow">
 					<feOffset result="offOut" in="SourceGraphic" dx="0" dy="0" />
 					<feGaussianBlur result="blurOut" in="offOut" stdDeviation="14" />
 					<feBlend in2="blurOut" mode="normal" in="SourceGraphic" />
@@ -47,7 +47,7 @@ export const Timer = ({ totalTime, remainingTime, seconds }: TimerProps) => {
 			/>
 			<use
 				href="#heartStroke"
-				filter="url(#timer12Glow)"
+				filter="url(#timer12StrokeGlow)"
 				stroke="url(#timer12StrokeGradient)"
 				className={styles.stroke}
 				strokeDasharray={`${remainingTime} ${totalTime}`}
