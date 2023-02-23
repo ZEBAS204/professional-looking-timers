@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import { readFileSync } from 'fs'
 
 import react from '@vitejs/plugin-react'
 import webfontDownload from 'vite-plugin-webfont-dl'
@@ -7,6 +8,24 @@ import replace from '@rollup/plugin-replace'
 
 const __PROJECT_SOURCE__ =
 	'https://github.com/ZEBAS204/professional-looking-timers'
+
+/**
+ * Get the current git branch of the project
+ * Defaults to master branch
+ */
+const getGitBranch = () => {
+	const dir = (e: string) => resolve(__dirname, e)
+	const defaultBranch = 'master'
+	try {
+		const rev = readFileSync(dir('.git/HEAD')).toString().trim()
+		if (rev.indexOf(':') === -1) return defaultBranch // DETACHED branch
+
+		return rev.split('/').pop()
+	} catch (err) {
+		console.error('Failed to get Git branch.', err)
+		return defaultBranch
+	}
+}
 
 export default defineConfig((configEnv) => {
 	const isDevelopment = configEnv.mode === 'development'
@@ -26,6 +45,8 @@ export default defineConfig((configEnv) => {
 						// get the timer folder, removing everything to the right of the last slash in the path.
 						return (
 							__PROJECT_SOURCE__ +
+							'tree/' +
+							getGitBranch() +
 							filePath.substring(filePath.indexOf('/src')).split('index')[0]
 						)
 					},
