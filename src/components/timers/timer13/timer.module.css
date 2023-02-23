@@ -1,0 +1,50 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.text {
+	font-size: 50px;
+	font-weight: 800;
+	fill: #fff;
+}
+
+.parallax use {
+	animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax use:nth-child(1) {
+	fill: rgba(7, 76, 111, 0.7);
+	animation-delay: -2s;
+	animation-duration: 7s;
+}
+
+/* nth-child(2) is a text */
+
+.parallax use:nth-child(3) {
+	fill: rgba(30, 155, 217, 0.3);
+	animation-delay: -4s;
+	animation-duration: 13s;
+}
+
+.parallax use:nth-child(4) {
+	fill: rgba(14, 130, 187, 0.91);
+	animation-delay: -5s;
+	animation-duration: 20s;
+}
+
+.parallax use:nth-child(5) {
+	fill: rgb(41, 170, 234);
+	animation-delay: -10s;
+	animation-duration: 21s;
+}
+
+@keyframes move-forever {
+	0% {
+		transform: translate3d(-90px, 0, 0);
+	}
+	100% {
+		transform: translate3d(85px, 0, 0);
+	}
+}
