@@ -45,7 +45,7 @@ export default defineConfig((configEnv) => {
 						// get the timer folder, removing everything to the right of the last slash in the path.
 						return (
 							__PROJECT_SOURCE__ +
-							'tree/' +
+							'/tree/' +
 							getGitBranch() +
 							filePath.substring(filePath.indexOf('/src')).split('index')[0]
 						)
