@@ -37,7 +37,7 @@ const allowedIcons: {
 
 interface TagProps {
 	icon: IconTypeName
-	children: ReactNode
+	children?: ReactNode
 	title?: string
 }
 
