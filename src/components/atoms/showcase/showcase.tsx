@@ -1,26 +1,12 @@
 import { useState, useRef, useEffect } from 'react'
-import {
-	CodeBracketIcon,
-	LinkIcon,
-	CubeIcon as CubeIconStroke,
-} from '@heroicons/react/24/outline'
-import {
-	RocketLaunchIcon,
-	UsersIcon,
-	CubeIcon as CubeIconSolid,
-} from '@heroicons/react/20/solid'
+import { CodeBracketIcon, LinkIcon } from '@heroicons/react/24/outline'
+
 import Resizable from 'components/atoms/resizable'
+import Tag from 'components/atoms/tag'
 
 import styles from './showcase.module.css'
 
-const Tag = ({ icon: Icon, children }) => (
-	<span className="px-3 py-1 flex items-center rounded-full text-white bg-indigo-500 ">
-		{Icon && <Icon className="mr-2 h-5 w-5" aria-hidden="true" />}
-		{children}
-	</span>
-)
-
-export default function ({
+export default function Showcase({
 	id,
 	title,
 	description,
@@ -44,9 +30,16 @@ export default function ({
 						<h2 className="text-2xl font-bold leading-7 sm:text-3xl sm:tracking-tight text-slate-100 mr-2">
 							{title}
 						</h2>
-						<Tag icon={RocketLaunchIcon}>Animated</Tag>
-						<Tag icon={CubeIconSolid}>Filled</Tag>
-						<Tag icon={CubeIconStroke}>Stroke</Tag>
+						<Tag icon="animated">Animated</Tag>
+						<Tag icon="filled">Filled</Tag>
+						<Tag icon="outlined">Stroke</Tag>
+						<Tag icon="misc">Misc</Tag>
+						<Tag
+							icon="warning"
+							title="This element may look different in some browsers"
+						>
+							May look different
+						</Tag>
 						<a
 							aria-hidden="true"
 							href={`#${id}`}
