@@ -1,0 +1,11 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+	/* Font: https://fonts.google.com/specimen/Monoton */
+	font-family: 'Monoton', Arial, Helvetica, sans-serif;
+}
+
+.text {
+	font-size: 120px;
+	text-anchor: middle;
+}

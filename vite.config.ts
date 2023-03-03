@@ -36,6 +36,7 @@ export default defineConfig((configEnv) => {
 			webfontDownload([
 				// TODO: use true type font
 				'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap',
+				'https://fonts.googleapis.com/css2?family=Monoton&display=swap', // Timer 14
 			]),
 			replace({
 				include: ['src/components/timers/**/index.tsx'],
