@@ -26,10 +26,20 @@ export default function Showcase({
 		<section className="flex flex-col mt-6 bg-dots-pattern" id={id} ref={ref}>
 			<div className="lg:flex lg:items-center lg:justify-between bg-slate-700 rounded-t-xl p-4 shadow-ring">
 				<div className="min-w-0 flex-1">
-					<div className="group inline-flex gap-2 items-center">
-						<h2 className="text-2xl font-bold leading-7 sm:text-3xl sm:tracking-tight text-slate-100 mr-2">
-							{title}
-						</h2>
+					<div className="inline-flex gap-2 items-center flex-wrap">
+						<div className="group inline-flex gap-1 items-center basis-full md:basis-[auto]">
+							<h2 className="text-2xl font-bold leading-7 sm:text-3xl sm:tracking-tight text-slate-100 mr-2">
+								{title}
+							</h2>
+							<a
+								aria-hidden="true"
+								href={`#${id}`}
+								title="Copy link"
+								className="opacity-0 group-hover:opacity-100 transition duration-200 text-slate-400 hover:text-indigo-500"
+							>
+								<LinkIcon className="h-6 w-6" />
+							</a>
+						</div>
 						<Tag icon="animated">Animated</Tag>
 						<Tag icon="filled">Filled</Tag>
 						<Tag icon="outlined">Stroke</Tag>
@@ -40,14 +50,6 @@ export default function Showcase({
 						>
 							May look different
 						</Tag>
-						<a
-							aria-hidden="true"
-							href={`#${id}`}
-							title="Copy link"
-							className="opacity-0 group-hover:opacity-100 transition duration-200 text-slate-400 hover:text-indigo-500"
-						>
-							<LinkIcon className="h-6 w-6" />
-						</a>
 					</div>
 					<div className="gap-3 flex flex-row flex-wrap text-slate-300">
 						<p className="mr-2">{description}</p>
