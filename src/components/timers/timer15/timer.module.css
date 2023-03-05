@@ -1,0 +1,60 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+}
+
+.topView {
+	fill: #2563eb;
+	stroke: #000;
+	stroke-width: 0.3;
+}
+
+.leftSideView {
+	fill: #467ffd;
+	stroke: #000;
+	stroke-width: 0.3;
+}
+
+.rightSideView {
+	fill: #143e9b;
+	stroke: #000;
+	stroke-width: 0.3;
+}
+
+.time {
+	font-family: Arial-Black, Arial, sans-serif;
+	font-size: 30px;
+	font-weight: 800;
+	fill: #fff;
+}
+
+.timeFormat {
+	font-family: Arial-Black, Arial, sans-serif;
+	font-size: 10px;
+	font-weight: 800;
+	fill: #fff;
+}
+
+.hours {
+	transform: translate(15px, 71px) matrix(0.87, -0.5, 0, 1, 0, 0);
+}
+
+.minutes {
+	transform: translate(55px, 50px) matrix(0.87, 0.5, 0, 1, 0, 0);
+}
+
+.seconds {
+	transform: translate(25px, 80px) matrix(0.87, 0.5, -0.87, 0.5, 0, 0);
+}
+
+.timeFormatHours {
+	transform: translate(55.5px, 69px) matrix(0.87, -0.5, 0, 1, 0, 0);
+}
+
+.timeFormatMinutes {
+	transform: translate(42.5px, 65px) matrix(0.87, 0.5, 0, 1, 0, 0);
+}
+
+.timeFormatSeconds {
+	transform: translate(47.5px, 53.5px) matrix(0.87, 0.5, -0.87, 0.5, 0, 0);
+}
