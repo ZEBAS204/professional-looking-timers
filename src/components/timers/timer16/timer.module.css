@@ -1,0 +1,42 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+	transform-style: preserve-3d;
+}
+
+.topView {
+	fill: #467ffd;
+	stroke: #000;
+	stroke-width: 0.3;
+}
+
+.leftSideView {
+	fill: #2563eb;
+	stroke: #000;
+	stroke-width: 0.3;
+}
+
+.rightSideView {
+	fill: #143e9b;
+	stroke: #000;
+	stroke-width: 0.3;
+}
+
+.time {
+	font-family: Arial-Black, Arial, sans-serif;
+	font-size: 30px;
+	font-weight: 800;
+	fill: #fff;
+}
+
+.hours {
+	transform: translate(12px, 67px) matrix(0.87, 0.5, 0, 1, 0, 0);
+}
+
+.minutes {
+	transform: translate(54px, 86px) matrix(0.87, -0.5, 0, 1, 0, 0);
+}
+
+.seconds {
+	transform: translate(24px, 21px) matrix(0.87, 0.5, -0.87, 0.5, 0, 0);
+}
