@@ -1,0 +1,24 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+}
+
+.planet {
+	fill: #e1e5ea;
+	stroke: #7d93b1;
+	stroke-width: 5px;
+	stroke-linecap: round; /* this prevents a thiny gap from showing */
+}
+
+.orb {
+	fill: #e1e5ea;
+	stroke: #7d93b1;
+	stroke-width: 2px;
+}
+
+.time {
+	font-family: Arial-Black, Arial, sans-serif;
+	font-size: 35px;
+	font-weight: 800;
+	fill: #7d93b1;
+}
