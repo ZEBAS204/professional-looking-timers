@@ -1,0 +1,16 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+	transition: filter 0.3s;
+	filter: saturate(0.9);
+}
+
+.base:hover {
+	filter: saturate(1) brightness(1.2);
+}
+
+.time {
+	font-family: Arial-Black, Arial, sans-serif;
+	font-size: 250px;
+	font-weight: 800;
+}
