@@ -23,7 +23,11 @@ export default function Showcase({
 	}, [])
 
 	return (
-		<section className="flex flex-col mt-6 bg-dots-pattern" id={id} ref={ref}>
+		<section
+			className="flex flex-col mt-6 bg-dots-pattern relative"
+			id={id}
+			ref={ref}
+		>
 			<div className="lg:flex lg:items-center lg:justify-between bg-slate-700 rounded-t-xl p-4 shadow-ring">
 				<div className="min-w-0 flex-1">
 					<div className="inline-flex gap-2 items-center flex-wrap">
@@ -71,7 +75,7 @@ export default function Showcase({
 				</div>
 			</div>
 			<Resizable initialWidth={width}>
-				<div className="flex justify-center p-6 rounded-b-xl border-2 border-t-0 border-dashed border-slate-600 bg-dots-pattern bg-slate-900 bg-opacity-30">
+				<div className="flex justify-center p-6 rounded-b-xl border border-slate-600 border-t-0 bg-dots-pattern bg-slate-900 ">
 					<div className={styles.resizableChildren}>{children}</div>
 				</div>
 			</Resizable>
