@@ -1,0 +1,30 @@
+.ReactModal__Overlay {
+	opacity: 0;
+	transition: all 200ms ease-in-out;
+}
+
+.ReactModal__Content {
+	@apply shadow-ring text-slate-200;
+	transform: translate(-50%, -10%);
+	transition: all 200ms ease-in-out;
+}
+
+.ReactModal__Content a {
+	@apply text-sky-400 font-semibold;
+}
+
+.ReactModal__Overlay--after-open {
+	opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+	opacity: 0;
+}
+
+.ReactModal__Overlay--after-open > .ReactModal__Content {
+	transform: translate(-50%, -50%);
+}
+
+.ReactModal__Overlay--before-close > .ReactModal__Content {
+	transform: translate(-50%, -10%);
+}
