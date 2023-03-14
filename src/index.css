@@ -6,6 +6,11 @@
   html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+		/*
+    * Prevents showing the white background when scrolling too fast
+    * Must use the same background as `.main` in app.modules.css
+    */
+		@apply bg-slate-800;
   }
 
   h1 {
