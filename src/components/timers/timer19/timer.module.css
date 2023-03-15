@@ -1,0 +1,59 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+	transition: filter 0.3s;
+}
+
+.base:hover {
+	filter: saturate(1.2);
+}
+
+.planet {
+	fill: #f2f4f7;
+}
+
+.outerGlow {
+	fill: #fff;
+}
+
+.outerGlow > circle:nth-child(1) {
+	opacity: 0.05;
+}
+
+.outerGlow > circle:nth-child(2) {
+	opacity: 0.1;
+}
+
+.outerGlow > circle:nth-child(3) {
+	opacity: 0.15;
+}
+
+.stars {
+	fill: #fff;
+	mix-blend-mode: overlay;
+}
+
+.orbPath {
+	stroke: #28dddd;
+	stroke-width: 1.5px;
+	stroke-miterlimit: 1.5;
+	stroke-dasharray: 14.3, 2.9, 2.9, 2.9, 2.9, 3;
+	animation: orbRotate 4s infinite alternate-reverse forwards;
+}
+
+.time {
+	font-family: Arial-Black, Arial, sans-serif;
+	font-size: 35px;
+	font-weight: 800;
+	fill: #7d93b1;
+}
+
+@keyframes orbRotate {
+	0% {
+		stroke-dashoffset: 60;
+		animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
