@@ -1,0 +1,35 @@
+{
+	"New timer return": {
+		"prefix": "rt",
+		"description": "Template for new timer's return object",
+		"scope": "typescript, typescriptreact",
+		"body": [
+			"const TIMER: TimerComponent = {${0}",
+			"\ttitle: '${1:Unmamed_Timer}',",
+			"\tdescription: '${2:A description}',",
+			"\tattribution: {",
+			"\t\tsource: '${3:source_url}',",
+			"\t\tsourceName: '${4:Source name}',",
+			"\t\tattribution: [{",
+			"\t\t\t\tname: '${5:Author/persona}',",
+			"\t\t\t\turl: '${6:url_if_needed}',",
+			"\t\t}],",
+			"\t},",
+			"\tsource: '__TIMER_URL__',",
+			"\tcomponent: Component,",
+			"}"
+		]
+	},
+	"New Time1": {
+		"prefix": "_time",
+		"description": "Add a new export of a timer",
+		"scope": "typescript, typescriptreact",
+		"body": ["export { default as Timer${num} } from './timer${num}'"]
+	},
+	"Time name": {
+		"prefix": "t",
+		"description": "Add a new export of a timer",
+		"scope": "typescript, typescriptreact",
+		"body": ["Timer${num}$0,"]
+	}
+}
