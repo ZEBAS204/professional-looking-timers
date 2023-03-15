@@ -1,7 +1,8 @@
 .base {
+	position: relative;
 	display: flex;
 	gap: 30px;
-	font-family: 'Segoe UI', Tahoma, Helvetica, Arial, Verdana, sans-serif;
+	font-family: sans-serif;
 	font-weight: bold;
 }
 
@@ -101,12 +102,12 @@
 
 .base::after {
 	bottom: 0;
-	right: 10%;
+	right: -4%;
 	backdrop-filter: blur(6px);
 }
 
 .base::before {
-	top: -2%;
+	top: -4%;
 	left: -12%;
 	backdrop-filter: blur(30px) saturate(180%);
 }
