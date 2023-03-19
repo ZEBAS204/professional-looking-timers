@@ -53,9 +53,10 @@ const showcase = [
 	Timer18,
 	Timer19,
 	Timer20,
-	...rest,
+].map(({ title, ...rest }: TimerComponent, key) => ({
 	title,
 	id: title.replace(' ', '-') + key,
+	...rest,
 }))
 
 export default function App() {
