@@ -45,10 +45,10 @@ export const Tag = ({ icon, children, title }: TagProps) => {
 	const Icon = allowedIcons[icon]
 	return (
 		<span
-			className="px-3 py-1 flex items-center rounded-full text-white bg-indigo-500"
+			className={styles.tag}
 			title={title}
 		>
-			<Icon className="mr-2 h-5 w-5" aria-hidden="true" />
+			<Icon className={styles.tagIcon} aria-hidden="true" />
 			{children}
 		</span>
 	)
