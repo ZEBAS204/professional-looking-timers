@@ -1,0 +1,15 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+}
+
+.time {
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+	font-size: 18px;
+	font-weight: 800;
+	fill: #00ff00;
+}
+
+.time::selection {
+	background: cyan;
+}
