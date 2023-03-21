@@ -80,7 +80,7 @@ export default function App() {
 			</main>
 			<footer className={styles.footer}>
 				<div className={styles.footerHeader}>
-					<h1 className={styles.contributeHeader}>Want to include your own?</h1>
+					<h2 className={styles.contributeHeader}>Want to include your own?</h2>
 					<a href={__PROJECT_SOURCE__} className={styles.contributeButton}>
 						<span className={styles.contributeButtonIcon}>
 							<ArrowRightIcon aria-hidden="true" />

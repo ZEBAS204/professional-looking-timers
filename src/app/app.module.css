@@ -54,7 +54,7 @@
 }
 
 .contributeHeader {
-	@apply relative sm:text-5xl text-3xl mb-6 text-white z-10;
+	@apply relative sm:text-5xl font-heading font-extrabold tracking-tight text-3xl mb-6 text-white z-10;
 }
 
 .contributeButton {
