@@ -14,12 +14,24 @@ export default function Showcase({
 	source,
 	children,
 }) {
-	const [width, setWidth] = useState(null)
-	const ref = useRef(null)
+	const [width, setWidth] = useState<number>(null)
+	const ref = useRef<HTMLDivElement>(null)
 
 	useEffect(() => {
-		const parentWidth = ref.current?.offsetWidth
-		setWidth(parentWidth)
+		let debounceTime: ReturnType<typeof setTimeout>
+
+		const resize = () => setWidth(ref.current?.offsetWidth)
+		resize()
+
+		const handleResize = () => {
+			clearTimeout(debounceTime)
+			debounceTime = setTimeout(resize, 250)
+		}
+		window.addEventListener('resize', handleResize)
+
+		return () => {
+			removeEventListener('resize', handleResize)
+		}
 	}, [])
 
 	return (
