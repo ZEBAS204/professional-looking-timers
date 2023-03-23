@@ -50,9 +50,13 @@ export default function ({
 		if (handleClose) handleClose()
 	}
 
+	//! Using conditional rendering with strict mode will bring
+	//! react-modal's issue #808 (github.com/reactjs/react-modal/issues/808)
+	if (!isOpen) return null
+
 	return (
 		<Modal
-			isOpen={isOpen}
+			isOpen
 			closeTimeoutMS={200}
 			onRequestClose={onClose}
 			contentLabel={title}
