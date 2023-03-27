@@ -8,7 +8,7 @@ import {
 	isValidElement,
 } from 'react'
 
-import useInterval from 'components/hooks/useInterval'
+import useInterval from 'hooks/useInterval'
 import { useTimerContext } from './time_context'
 
 /** Default fallback of the remaining time if not time is provided (30sec) */
