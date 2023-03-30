@@ -1,0 +1,11 @@
+.base {
+	display: block;
+	fill: none;
+	transform-box: fill-box;
+}
+
+.time {
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+	font-size: 2rem;
+	font-weight: 800;
+}
