@@ -1,0 +1,26 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+	/* Font: https://fonts.google.com/specimen/Roboto */
+	font-family: Roboto, sans-serif;
+}
+
+.time {
+	font-size: 100px;
+	font-weight: 700;
+	fill: #282c30;
+}
+
+.timeSmall {
+	font-size: 50px;
+	font-weight: 700;
+	fill: #282c30;
+}
+
+.timeActive {
+	fill: yellow;
+}
+
+.timeActiveSecond {
+	fill: rgb(255, 255, 109);
+}
