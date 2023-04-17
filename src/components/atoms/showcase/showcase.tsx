@@ -1,10 +1,17 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, PropsWithChildren } from 'react'
 import { CodeBracketIcon, LinkIcon } from '@heroicons/react/24/outline'
 
 import Resizable from 'components/atoms/resizable'
 import Tag from 'components/atoms/tag'
 
 import styles from './showcase.module.css'
+import AttributionButton from 'components/molecules/attribution-button'
+
+interface ShowcaseProps
+	extends PropsWithChildren<unknown>,
+		Omit<TimerComponent, 'component'> {
+	id: string
+}
 
 export default function Showcase({
 	id,
@@ -13,7 +20,7 @@ export default function Showcase({
 	attribution,
 	source,
 	children,
-}) {
+}: ShowcaseProps) {
 	const [width, setWidth] = useState<number>(null)
 	const ref = useRef<HTMLDivElement>(null)
 
@@ -73,6 +80,7 @@ export default function Showcase({
 				</div>
 				<div className="mt-5 flex lg:mt-0 lg:ml-4">
 					<div className="sm:ml-3">
+						<AttributionButton attributions={attribution} />
 						<a
 							href={source}
 							className="inline-flex items-center rounded-md border border-transparent bg-indigo-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
