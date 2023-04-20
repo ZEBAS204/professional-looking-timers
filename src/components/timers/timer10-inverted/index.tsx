@@ -11,10 +11,20 @@ const Component = (): JSX.Element => {
 	)
 }
 
-const TIMER = {
+const TIMER: TimerComponent = {
 	title: "Pizza o'clock - Inverted",
 	description: 'A description',
-	attribution: [],
+	attribution: {
+		source: 'https://dribbble.com/shots/2791746-Pizza-Time',
+		sourceName: 'Pizza Time',
+		isIspiredBy: true,
+		attribution: [
+			{
+				name: 'Anjan Shrestha',
+				url: 'https://dribbble.com/anjhero',
+			},
+		],
+	},
 	source: '__TIMER_URL__',
 	component: Component,
 }

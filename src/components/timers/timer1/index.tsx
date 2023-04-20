@@ -11,10 +11,13 @@ const Component = (): JSX.Element => {
 	)
 }
 
-const TIMER = {
+const TIMER: TimerComponent = {
 	title: 'Timer 1',
 	description: 'A description',
-	attribution: [],
+	attribution: {
+		source: 'https://github.com/ZEBAS204/I-GEN',
+		sourceName: 'I-GEN',
+	},
 	source: '__TIMER_URL__',
 	component: Component,
 }

@@ -11,10 +11,19 @@ const Component = (): JSX.Element => {
 	)
 }
 
-const TIMER = {
+const TIMER: TimerComponent = {
 	title: 'Gradient Circle',
 	description: 'A description',
-	attribution: [],
+	attribution: {
+		source: 'https://dribbble.com/shots/17474098-Mobile-Voice-Recorder',
+		sourceName: 'Mobile Voice Recorder',
+		attribution: [
+			{
+				name: 'Anton Lapko',
+				url: 'https://dribbble.com/anronkai',
+			},
+		],
+	},
 	source: '__TIMER_URL__',
 	component: Component,
 }
