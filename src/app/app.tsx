@@ -29,6 +29,7 @@ import {
 	Timer20,
 	Timer21,
 	Timer22,
+	Timer23,
 } from 'components/timers'
 
 const showcase = [
@@ -57,6 +58,7 @@ const showcase = [
 	Timer20,
 	Timer21,
 	Timer22,
+	Timer23,
 ].map(({ title, ...rest }: TimerComponent, key) => ({
 	title,
 	id: title.replace(' ', '-') + key,

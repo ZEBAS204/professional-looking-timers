@@ -1,0 +1,44 @@
+.base {
+	fill: none;
+	transform-box: fill-box;
+}
+
+.baseColor {
+	fill: #9f4dff;
+}
+
+.baseColorWatch {
+	fill: #c14dff;
+}
+
+.display {
+	fill: #000072;
+}
+
+.highlights {
+	fill: #fff;
+	opacity: 0.4;
+}
+
+.shadows {
+	fill: #000072;
+	opacity: 0.3;
+}
+
+.stroke {
+	fill: #000072;
+}
+
+.time {
+	font-family: Arial-Black, Arial, sans-serif;
+	font-size: 480px;
+	font-weight: 800;
+}
+
+.hours {
+	fill: #e9f0f4;
+}
+
+.minutes {
+	fill: #64c4ff;
+}
